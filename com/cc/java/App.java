@@ -12,13 +12,10 @@ public class App {
         pollObj(queen);
         pollObj(worker);
         pollObj(drone);
+        output("----------------------");
         pollObj(bird);
 
-        // HoneyBee ist abstrakt --> Fehler!
-        // HoneyBee bee = new HoneyBee();
-        // output(bee.doYourJob());
-
-
+        
     }
 
     // 2. Variante Polymorphie
@@ -27,6 +24,10 @@ public class App {
         output(bee.fly());
     }
 
+    private static void pollObj(Bird obj) {
+        output(obj.hasFeathers());
+        output(obj.fly());
+    }
    
     private static void output(String outputStr) {
         System.out.println(outputStr);
